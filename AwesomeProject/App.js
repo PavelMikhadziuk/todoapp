@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { AppRegistry, StyleSheet, Text, View } from 'react-native';
+import TextInANest from 'AwesomeProject/components/TextInANest.jsx';
 
 const styles = StyleSheet.create({
   bigBlue: {
@@ -20,6 +21,7 @@ export default class LotsOfStyles extends Component {
         <Text style={styles.bigBlue}>just bigBlue</Text>
         <Text style={[styles.bigBlue, styles.red]}>bigBlue, then red</Text>
         <Text style={[styles.red, styles.bigBlue]}>red, then bigBlue</Text>
+        <TextInANest />
       </View>
     );
   }
