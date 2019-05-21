@@ -1,16 +1,30 @@
 import React, { Component } from 'react';
-import { AppRegistry, Image } from 'react-native';
+import { AppRegistry, Text, View } from 'react-native';
 
-export default class Bananas extends Component {
+class Greeting extends Component {
   render() {
-    let pic = {
-      uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
-    };
     return (
-      <Image source={pic} style={{width: 193, height: 110}}/>
+      <View style={{alignItems: 'center'}}>
+        <Text>Hello {this.props.name}!</Text>
+      </View>
+    );
+  }
+}
+
+export default class LotsOfGreetings extends Component {
+  render() {
+    return (
+      <View style={{alignItems: 'center', top: 50}}>
+        <Greeting name='Rexxar' />
+        <Greeting name='Jaina' />
+        <Greeting name='Valeera' />
+        <View style={{alignItems: 'center', top: 88}}>
+          <Greeting name='Pavel Mikhadziuk' />
+        </View>
+      </View>
     );
   }
 }
 
 // skip this line if using Create React Native App
-AppRegistry.registerComponent('AwesomeProject', () => Bananas);
+AppRegistry.registerComponent('AwesomeProject', () => LotsOfGreetings);
