@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { AppRegistry, StyleSheet, Text, View } from 'react-native';
 import PizzaTranslator from './components/PizzaTranslator';
 import UselessTextInput from './components/UselessTextInput';
+import UselessTextInputMultiline from './components/UselessTextInputMultiline';
 // import TextInANest from './components/TextInANest';
 // import BoldAndBeautiful from './components/BoldAndBeautiful';
 // import BlockText from './components/BlockText';
@@ -28,6 +29,7 @@ export default class LotsOfStyles extends Component {
       <View style={{flex: 1}}>
         <PizzaTranslator />
         <UselessTextInput/>
+        <UselessTextInputMultiline />
         {/*<AlignItemsBasics flexDirection="row" justifyContent="center" alignItems="flex-start"/>*/}
         {/*<AlignItemsBasics flexDirection="row" justifyContent="space-around" alignItems="flex-start"/>*/}
         {/*<AlignItemsBasics flexDirection="row" justifyContent="center" alignItems="flex-end"/>*/}
