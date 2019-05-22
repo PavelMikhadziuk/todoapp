@@ -9,7 +9,7 @@ export default class PizzaTranslator extends Component {
   }
 
   handleChangeText = (text) => {
-    this.setState({text});
+    this.setState({ text: text.toUpperCase() });
   };
 
   translateTextToPizzas = (text) => {
@@ -23,6 +23,11 @@ export default class PizzaTranslator extends Component {
           style={{height: 40}}
           placeholder="Type here to translate!"
           onChangeText={this.handleChangeText}
+          value={this.state.text.toLowerCase()}
+          // editable={false}
+          multiline={true}
+          numberOfLines={4}
+          maxLength={40}
         />
         <Text style={{padding: 10, fontSize: 42}}>
           {this.translateTextToPizzas(this.state.text)}

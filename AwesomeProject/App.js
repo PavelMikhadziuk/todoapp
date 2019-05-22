@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { AppRegistry, StyleSheet, Text, View } from 'react-native';
 import PizzaTranslator from './components/PizzaTranslator';
+import UselessTextInput from './components/UselessTextInput';
 // import TextInANest from './components/TextInANest';
 // import BoldAndBeautiful from './components/BoldAndBeautiful';
 // import BlockText from './components/BlockText';
@@ -26,6 +27,7 @@ export default class LotsOfStyles extends Component {
     return (
       <View style={{flex: 1}}>
         <PizzaTranslator />
+        <UselessTextInput/>
         {/*<AlignItemsBasics flexDirection="row" justifyContent="center" alignItems="flex-start"/>*/}
         {/*<AlignItemsBasics flexDirection="row" justifyContent="space-around" alignItems="flex-start"/>*/}
         {/*<AlignItemsBasics flexDirection="row" justifyContent="center" alignItems="flex-end"/>*/}
