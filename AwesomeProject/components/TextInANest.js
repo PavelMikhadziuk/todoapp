@@ -11,6 +11,10 @@ export default class TextInANest extends Component {
     };
   }
 
+  onPressTitle = e => {
+    console.log(e);
+  };
+
   render() {
     return (
       <Text style={styles.baseText}>
