@@ -3,6 +3,7 @@ import { AppRegistry, StyleSheet, Text, View } from 'react-native';
 import TextInANest from './components/TextInANest';
 import BoldAndBeautiful from './components/BoldAndBeautiful';
 import BlockText from './components/BlockText';
+import FixedDimensionsBasics from './components/FixedDimensionsBasics';
 
 const styles = StyleSheet.create({
   bigBlue: {
@@ -26,6 +27,7 @@ export default class LotsOfStyles extends Component {
         <TextInANest />
         <BoldAndBeautiful />
         <BlockText />
+        <FixedDimensionsBasics />
       </View>
     );
   }
