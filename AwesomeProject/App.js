@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { AppRegistry, StyleSheet, Text, View } from 'react-native';
 import TextInANest from './components/TextInANest';
 import BoldAndBeautiful from './components/BoldAndBeautiful';
+import BlockText from './components/BlockText';
 
 const styles = StyleSheet.create({
   bigBlue: {
@@ -24,6 +25,7 @@ export default class LotsOfStyles extends Component {
         <Text style={[styles.red, styles.bigBlue]}>red, then bigBlue</Text>
         <TextInANest />
         <BoldAndBeautiful />
+        <BlockText />
       </View>
     );
   }
