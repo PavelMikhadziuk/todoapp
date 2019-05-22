@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { AppRegistry, StyleSheet, Text, View, Button, Alert } from 'react-native';
-import PizzaTranslator from './components/PizzaTranslator';
-import UselessTextInput from './components/UselessTextInput';
-import UselessTextInputMultiline from './components/UselessTextInputMultiline';
-import ButtonBasics from './components/ButtonBasics';
+import IScrolledDownAndWhatHappenedNextShockedMe from './components/IScrolledDownAndWhatHappenedNextShockedMe';
+// import Touchables from './components/Touchables';
+// import PizzaTranslator from './components/PizzaTranslator';
+// import UselessTextInput from './components/UselessTextInput';
+// import UselessTextInputMultiline from './components/UselessTextInputMultiline';
+// import ButtonBasics from './components/ButtonBasics';
 // import TextInANest from './components/TextInANest';
 // import BoldAndBeautiful from './components/BoldAndBeautiful';
 // import BlockText from './components/BlockText';
@@ -28,16 +30,18 @@ export default class LotsOfStyles extends Component {
   render() {
     return (
       <View style={{flex: 1}}>
-        <PizzaTranslator />
-        <UselessTextInput/>
-        <UselessTextInputMultiline />
-        <Button
-          onPress={() => {
-            Alert.alert('You tapped the button!');
-          }}
-          title="Press Me"
-        />
-        <ButtonBasics />
+        <IScrolledDownAndWhatHappenedNextShockedMe />
+        {/*<Touchables />*/}
+        {/*<PizzaTranslator />*/}
+        {/*<UselessTextInput/>*/}
+        {/*<UselessTextInputMultiline />*/}
+        {/*<Button*/}
+          {/*onPress={() => {*/}
+            {/*Alert.alert('You tapped the button!');*/}
+          {/*}}*/}
+          {/*title="Press Me"*/}
+        {/*/>*/}
+        {/*<ButtonBasics />*/}
         {/*<AlignItemsBasics flexDirection="row" justifyContent="center" alignItems="flex-start"/>*/}
         {/*<AlignItemsBasics flexDirection="row" justifyContent="space-around" alignItems="flex-start"/>*/}
         {/*<AlignItemsBasics flexDirection="row" justifyContent="center" alignItems="flex-end"/>*/}
