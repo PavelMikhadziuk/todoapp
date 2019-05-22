@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { AppRegistry, StyleSheet, Text, View, Button, Alert } from 'react-native';
-import IScrolledDownAndWhatHappenedNextShockedMe from './components/IScrolledDownAndWhatHappenedNextShockedMe';
+import FlatListBasics from './components/FlatListBasics';
+// import IScrolledDownAndWhatHappenedNextShockedMe from './components/IScrolledDownAndWhatHappenedNextShockedMe';
 // import Touchables from './components/Touchables';
 // import PizzaTranslator from './components/PizzaTranslator';
 // import UselessTextInput from './components/UselessTextInput';
@@ -30,7 +31,8 @@ export default class LotsOfStyles extends Component {
   render() {
     return (
       <View style={{flex: 1}}>
-        <IScrolledDownAndWhatHappenedNextShockedMe />
+        <FlatListBasics />
+        {/*<IScrolledDownAndWhatHappenedNextShockedMe />*/}
         {/*<Touchables />*/}
         {/*<PizzaTranslator />*/}
         {/*<UselessTextInput/>*/}
