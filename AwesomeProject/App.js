@@ -24,7 +24,18 @@ export default class LotsOfStyles extends Component {
   render() {
     return (
       <View style={{flex: 1}}>
-        <AlignItemsBasics />
+        <AlignItemsBasics flexDirection="row" justifyContent="center" alignItems="flex-start"/>
+        <AlignItemsBasics flexDirection="row" justifyContent="space-around" alignItems="flex-start"/>
+        <AlignItemsBasics flexDirection="row" justifyContent="center" alignItems="flex-end"/>
+        <AlignItemsBasics flexDirection="row" justifyContent="space-around" alignItems="flex-end"/>
+        <AlignItemsBasics flexDirection="row" justifyContent="center" alignItems="center"/>
+        <AlignItemsBasics flexDirection="row" justifyContent="space-around" alignItems="center"/>
+        {/*<AlignItemsBasics flexDirection="column" justifyContent="space-between" alignItems="center"/>*/}
+        {/*<AlignItemsBasics flexDirection="column" justifyContent="flex-start" alignItems="flex-start"/>*/}
+        {/*<AlignItemsBasics flexDirection="column" justifyContent="flex-end" alignItems="flex-end"/>*/}
+        {/*<AlignItemsBasics flexDirection="column" justifyContent="center" alignItems="flex-start"/>*/}
+        {/*<AlignItemsBasics flexDirection="column" justifyContent="space-around" alignItems="flex-end"/>*/}
+        {/*<AlignItemsBasics flexDirection="column" justifyContent="space-evenly" alignItems="center"/>*/}
         {/*<JustifyContentBasics flexDirection="column"/>*/}
         {/*<JustifyContentBasics flexDirection="row"/>*/}
         {/*<JustifyContentBasics flexDirection="row" justifyContent="flex-start"/>*/}

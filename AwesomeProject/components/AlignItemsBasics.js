@@ -9,13 +9,13 @@ export default class AlignItemsBasics extends Component {
       // Try setting `flexDirection` to `row`.
       <View style={{
         flex: 1,
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'stretch',
+        flexDirection: this.props.flexDirection,
+        justifyContent: this.props.justifyContent,
+        alignItems: this.props.alignItems,
       }}>
         <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
-        <View style={{height: 50, backgroundColor: 'skyblue'}} />
-        <View style={{height: 100, backgroundColor: 'steelblue'}} />
+        <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
+        <View style={{width: 50, height: 100, backgroundColor: 'steelblue'}} />
       </View>
     );
   }
