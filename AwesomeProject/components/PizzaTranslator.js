@@ -8,16 +8,24 @@ export default class PizzaTranslator extends Component {
     this.state = {text: ''};
   }
 
+  handleChangeText = (text) => {
+    this.setState({text});
+  };
+
+  translateTextToPizzas = (text) => {
+    return text.split(' ').map((word) => word && '🍕').join(' ');
+  };
+
   render() {
     return (
       <View style={{padding: 10}}>
         <TextInput
           style={{height: 40}}
           placeholder="Type here to translate!"
-          onChangeText={(text) => this.setState({text})}
+          onChangeText={this.handleChangeText}
         />
         <Text style={{padding: 10, fontSize: 42}}>
-          {this.state.text.split(' ').map((word) => word && '🍕').join(' ')}
+          {this.translateTextToPizzas(this.state.text)}
         </Text>
       </View>
     );
