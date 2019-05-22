@@ -4,6 +4,7 @@ import TextInANest from './components/TextInANest';
 import BoldAndBeautiful from './components/BoldAndBeautiful';
 import BlockText from './components/BlockText';
 import FixedDimensionsBasics from './components/FixedDimensionsBasics';
+import FlexDimensionsBasics from './components/FlexDimensionsBasics';
 
 const styles = StyleSheet.create({
   bigBlue: {
@@ -19,15 +20,13 @@ const styles = StyleSheet.create({
 export default class LotsOfStyles extends Component {
   render() {
     return (
-      <View>
+      <View style={{flex: 1}}>
         <Text style={styles.red}>just red</Text>
-        <Text style={styles.bigBlue}>just bigBlue</Text>
-        <Text style={[styles.bigBlue, styles.red]}>bigBlue, then red</Text>
-        <Text style={[styles.red, styles.bigBlue]}>red, then bigBlue</Text>
         <TextInANest />
         <BoldAndBeautiful />
         <BlockText />
         <FixedDimensionsBasics />
+        <FlexDimensionsBasics />
       </View>
     );
   }
