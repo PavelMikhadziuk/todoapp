@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { AppRegistry, StyleSheet, Text, View, Button, Alert } from 'react-native';
-import SectionListBasics from './components/SectionListBasics';
+import FetchExample from './components/FetchExample';
+// import SectionListBasics from './components/SectionListBasics';
 // import FlatListBasics from './components/FlatListBasics';
 // import IScrolledDownAndWhatHappenedNextShockedMe from './components/IScrolledDownAndWhatHappenedNextShockedMe';
 // import Touchables from './components/Touchables';
@@ -17,22 +18,23 @@ import SectionListBasics from './components/SectionListBasics';
 // import JustifyContentBasics from './components/JustifyContentBasics';
 // import AlignItemsBasics from './components/AlignItemsBasics';
 
-const styles = StyleSheet.create({
-  bigBlue: {
-    color: 'blue',
-    fontWeight: 'bold',
-    fontSize: 30,
-  },
-  red: {
-    color: 'red',
-  },
-});
+// const styles = StyleSheet.create({
+//   bigBlue: {
+//     color: 'blue',
+//     fontWeight: 'bold',
+//     fontSize: 30,
+//   },
+//   red: {
+//     color: 'red',
+//   },
+// });
 
 export default class LotsOfStyles extends Component {
   render() {
     return (
       <View style={{flex: 1}}>
-        <SectionListBasics />
+        <FetchExample />
+        {/* <SectionListBasics /> */}
         {/*<FlatListBasics />*/}
         {/*<IScrolledDownAndWhatHappenedNextShockedMe />*/}
         {/*<Touchables />*/}
