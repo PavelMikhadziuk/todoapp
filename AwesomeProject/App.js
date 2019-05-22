@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { AppRegistry, StyleSheet, Text, View } from 'react-native';
-import TextInANest from './components/TextInANest';
-import BoldAndBeautiful from './components/BoldAndBeautiful';
-import BlockText from './components/BlockText';
+import PizzaTranslator from './components/PizzaTranslator';
+// import TextInANest from './components/TextInANest';
+// import BoldAndBeautiful from './components/BoldAndBeautiful';
+// import BlockText from './components/BlockText';
 // import FixedDimensionsBasics from './components/FixedDimensionsBasics';
 // import FlexDimensionsBasics from './components/FlexDimensionsBasics';
 // import FlexDirectionBasics from './components/FlexDirectionBasics';
-import JustifyContentBasics from './components/JustifyContentBasics';
-import AlignItemsBasics from './components/AlignItemsBasics';
+// import JustifyContentBasics from './components/JustifyContentBasics';
+// import AlignItemsBasics from './components/AlignItemsBasics';
 
 const styles = StyleSheet.create({
   bigBlue: {
@@ -24,12 +25,13 @@ export default class LotsOfStyles extends Component {
   render() {
     return (
       <View style={{flex: 1}}>
-        <AlignItemsBasics flexDirection="row" justifyContent="center" alignItems="flex-start"/>
-        <AlignItemsBasics flexDirection="row" justifyContent="space-around" alignItems="flex-start"/>
-        <AlignItemsBasics flexDirection="row" justifyContent="center" alignItems="flex-end"/>
-        <AlignItemsBasics flexDirection="row" justifyContent="space-around" alignItems="flex-end"/>
-        <AlignItemsBasics flexDirection="row" justifyContent="center" alignItems="center"/>
-        <AlignItemsBasics flexDirection="row" justifyContent="space-around" alignItems="center"/>
+        <PizzaTranslator />
+        {/*<AlignItemsBasics flexDirection="row" justifyContent="center" alignItems="flex-start"/>*/}
+        {/*<AlignItemsBasics flexDirection="row" justifyContent="space-around" alignItems="flex-start"/>*/}
+        {/*<AlignItemsBasics flexDirection="row" justifyContent="center" alignItems="flex-end"/>*/}
+        {/*<AlignItemsBasics flexDirection="row" justifyContent="space-around" alignItems="flex-end"/>*/}
+        {/*<AlignItemsBasics flexDirection="row" justifyContent="center" alignItems="center"/>*/}
+        {/*<AlignItemsBasics flexDirection="row" justifyContent="space-around" alignItems="center"/>*/}
         {/*<AlignItemsBasics flexDirection="column" justifyContent="space-between" alignItems="center"/>*/}
         {/*<AlignItemsBasics flexDirection="column" justifyContent="flex-start" alignItems="flex-start"/>*/}
         {/*<AlignItemsBasics flexDirection="column" justifyContent="flex-end" alignItems="flex-end"/>*/}
