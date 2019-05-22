@@ -7,6 +7,7 @@ import BlockText from './components/BlockText';
 // import FlexDimensionsBasics from './components/FlexDimensionsBasics';
 // import FlexDirectionBasics from './components/FlexDirectionBasics';
 import JustifyContentBasics from './components/JustifyContentBasics';
+import AlignItemsBasics from './components/AlignItemsBasics';
 
 const styles = StyleSheet.create({
   bigBlue: {
@@ -23,18 +24,19 @@ export default class LotsOfStyles extends Component {
   render() {
     return (
       <View style={{flex: 1}}>
-        <JustifyContentBasics flexDirection="column"/>
-        <JustifyContentBasics flexDirection="row"/>
-        <JustifyContentBasics flexDirection="row" justifyContent="flex-start"/>
-        <JustifyContentBasics flexDirection="row" justifyContent="center"/>
-        <JustifyContentBasics flexDirection="row" justifyContent="flex-end"/>
-        <JustifyContentBasics flexDirection="row" justifyContent="space-around"/>
-        <JustifyContentBasics flexDirection="row" justifyContent="space-between"/>
-        <JustifyContentBasics flexDirection="row" justifyContent="space-evenly"/>
-        <Text style={styles.red}>just red</Text>
-        <TextInANest />
-        <BoldAndBeautiful />
-        <BlockText />
+        <AlignItemsBasics />
+        {/*<JustifyContentBasics flexDirection="column"/>*/}
+        {/*<JustifyContentBasics flexDirection="row"/>*/}
+        {/*<JustifyContentBasics flexDirection="row" justifyContent="flex-start"/>*/}
+        {/*<JustifyContentBasics flexDirection="row" justifyContent="center"/>*/}
+        {/*<JustifyContentBasics flexDirection="row" justifyContent="flex-end"/>*/}
+        {/*<JustifyContentBasics flexDirection="row" justifyContent="space-around"/>*/}
+        {/*<JustifyContentBasics flexDirection="row" justifyContent="space-between"/>*/}
+        {/*<JustifyContentBasics flexDirection="row" justifyContent="space-evenly"/>*/}
+        {/*<Text style={styles.red}>Just divider text, bro.</Text>*/}
+        {/*<TextInANest />*/}
+        {/*<BoldAndBeautiful />*/}
+        {/*<BlockText />*/}
         {/*<FlexDirectionBasics />*/}
         {/*<FixedDimensionsBasics />*/}
         {/*<FlexDimensionsBasics />*/}
