@@ -6,6 +6,7 @@ import BlockText from './components/BlockText';
 import FixedDimensionsBasics from './components/FixedDimensionsBasics';
 import FlexDimensionsBasics from './components/FlexDimensionsBasics';
 import FlexDirectionBasics from './components/FlexDirectionBasics';
+import JustifyContentBasics from './components/JustifyContentBasics';
 
 const styles = StyleSheet.create({
   bigBlue: {
@@ -23,6 +24,8 @@ export default class LotsOfStyles extends Component {
     return (
       <View style={{flex: 1}}>
         <FlexDirectionBasics />
+        <JustifyContentBasics flexDirection="row"/>
+        <JustifyContentBasics flexDirection="column"/>
         <Text style={styles.red}>just red</Text>
         <TextInANest />
         <BoldAndBeautiful />
