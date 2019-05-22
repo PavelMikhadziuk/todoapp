@@ -9,7 +9,7 @@ export default class JustifyContentBasics extends Component {
       <View style={{
         flex: 1,
         flexDirection: this.props.flexDirection,
-        justifyContent: 'space-between',
+        justifyContent: this.props.justifyContent,
       }}>
         <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
         <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />

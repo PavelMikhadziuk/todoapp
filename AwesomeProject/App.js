@@ -3,9 +3,9 @@ import { AppRegistry, StyleSheet, Text, View } from 'react-native';
 import TextInANest from './components/TextInANest';
 import BoldAndBeautiful from './components/BoldAndBeautiful';
 import BlockText from './components/BlockText';
-import FixedDimensionsBasics from './components/FixedDimensionsBasics';
-import FlexDimensionsBasics from './components/FlexDimensionsBasics';
-import FlexDirectionBasics from './components/FlexDirectionBasics';
+// import FixedDimensionsBasics from './components/FixedDimensionsBasics';
+// import FlexDimensionsBasics from './components/FlexDimensionsBasics';
+// import FlexDirectionBasics from './components/FlexDirectionBasics';
 import JustifyContentBasics from './components/JustifyContentBasics';
 
 const styles = StyleSheet.create({
@@ -23,15 +23,21 @@ export default class LotsOfStyles extends Component {
   render() {
     return (
       <View style={{flex: 1}}>
-        <FlexDirectionBasics />
-        <JustifyContentBasics flexDirection="row"/>
         <JustifyContentBasics flexDirection="column"/>
+        <JustifyContentBasics flexDirection="row"/>
+        <JustifyContentBasics flexDirection="row" justifyContent="flex-start"/>
+        <JustifyContentBasics flexDirection="row" justifyContent="center"/>
+        <JustifyContentBasics flexDirection="row" justifyContent="flex-end"/>
+        <JustifyContentBasics flexDirection="row" justifyContent="space-around"/>
+        <JustifyContentBasics flexDirection="row" justifyContent="space-between"/>
+        <JustifyContentBasics flexDirection="row" justifyContent="space-evenly"/>
         <Text style={styles.red}>just red</Text>
         <TextInANest />
         <BoldAndBeautiful />
         <BlockText />
-        <FixedDimensionsBasics />
-        <FlexDimensionsBasics />
+        {/*<FlexDirectionBasics />*/}
+        {/*<FixedDimensionsBasics />*/}
+        {/*<FlexDimensionsBasics />*/}
       </View>
     );
   }
