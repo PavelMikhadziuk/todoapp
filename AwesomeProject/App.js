@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { AppRegistry, StyleSheet, Text, View, Button, Alert } from 'react-native';
-import FlatListBasics from './components/FlatListBasics';
+import SectionListBasics from './components/SectionListBasics';
+// import FlatListBasics from './components/FlatListBasics';
 // import IScrolledDownAndWhatHappenedNextShockedMe from './components/IScrolledDownAndWhatHappenedNextShockedMe';
 // import Touchables from './components/Touchables';
 // import PizzaTranslator from './components/PizzaTranslator';
@@ -31,7 +32,8 @@ export default class LotsOfStyles extends Component {
   render() {
     return (
       <View style={{flex: 1}}>
-        <FlatListBasics />
+        <SectionListBasics />
+        {/*<FlatListBasics />*/}
         {/*<IScrolledDownAndWhatHappenedNextShockedMe />*/}
         {/*<Touchables />*/}
         {/*<PizzaTranslator />*/}
