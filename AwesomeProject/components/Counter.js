@@ -35,14 +35,14 @@ const styles = StyleSheet.create({
 
 const mapStateToProps = state => ({ state });
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = dispatch => ({
   onIncrement: () => {
     dispatch({ type: INCREMENT });
-  };
+  },
 
   onDecrement: () => {
     dispatch({ type: DECREMENT });
-  };
-};
+  },
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Counter);
