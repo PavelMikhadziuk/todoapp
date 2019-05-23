@@ -1,4 +1,3 @@
-import { createStore } from 'redux';
 import { INCREMENT, DECREMENT } from '../constants/actions';
 
 export const counter = (state = 0, action) => {
@@ -10,35 +9,3 @@ export const counter = (state = 0, action) => {
     return state;
   }
 }
-
-const createStore = (reducer) => {
-  let state;
-  let listeners = [];
-
-  const getState = () => state;
-
-  const dispatch = (action) => {
-    state = reducer(state, action);
-    listeners.forEach(listener => listener());
-  }
-
-  const subscribe = (listener) => {
-    listeners.push(listener);
-    return () => {
-      listeners = listeners.filter(l => l !== listener);
-    }
-  }
-
-  dispatch({});
-
-  return { getState, dispatch, subscribe };
-}
-export const store = createStore(counter);
-console.log(store.getState());
-store.subscribe();
-store.dispatch({ type: INCREMENT });
-const render = () => {
-  document.body.innerText = store.getState();
-};
-
-render();

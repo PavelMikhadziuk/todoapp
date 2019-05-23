@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+import { createStore } from 'redux';
 import { AppRegistry, StyleSheet, Text, View, Button, Alert } from 'react-native';
-import FetchExample from './components/FetchExample';
+import Counter from './components/Counter';
+import { counter } from './reducers/reducers';
+import { INCREMENT, DECREMENT } from './constants/actions';
+// import FetchExample from './components/FetchExample';
 // import SectionListBasics from './components/SectionListBasics';
 // import FlatListBasics from './components/FlatListBasics';
 // import IScrolledDownAndWhatHappenedNextShockedMe from './components/IScrolledDownAndWhatHappenedNextShockedMe';
@@ -28,12 +32,28 @@ import FetchExample from './components/FetchExample';
 //     color: 'red',
 //   },
 // });
+const store = createStore(counter);
+store.subscribe(Counter);
 
-export default class LotsOfStyles extends Component {
+export default class App extends Component {
+
+  onIncrement = () => {
+    store.dispatch({ type: INCREMENT });
+  };
+
+  onDecrement = () => {
+    store.dispatch({ type: DECREMENT });
+  };
+
   render() {
     return (
       <View style={{flex: 1}}>
-        <FetchExample />
+        <Counter
+          value={store.getState()}
+          onIncrement={this.onIncrement}
+          onDecrement={this.onDecrement}
+        />
+        {/*<FetchExample />*/}
         {/* <SectionListBasics /> */}
         {/*<FlatListBasics />*/}
         {/*<IScrolledDownAndWhatHappenedNextShockedMe />*/}
@@ -81,4 +101,4 @@ export default class LotsOfStyles extends Component {
 }
 
 // skip this line if using Create React Native App
-AppRegistry.registerComponent('AwesomeProject', () => LotsOfStyles);
+AppRegistry.registerComponent('AwesomeProject', () => App);
