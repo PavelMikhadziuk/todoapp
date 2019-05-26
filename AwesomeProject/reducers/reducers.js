@@ -1,11 +1,13 @@
 import { INCREMENT, DECREMENT } from '../constants/actions';
 
-export const counter = (state = 0, action) => {
+const initialState = { count: 0 };
+
+export const counter = (state = initialState, action) => {
   if (action.type === INCREMENT) {
-    return state + 1;
+    return Object.assign({}, state, { count: state.count + 1 });
   } else if (action.type === DECREMENT) {
-    return state - 1;
+    return Object.assign({}, state, {count: state.count - 1 });
   } else {
     return state;
   }
-}
+};

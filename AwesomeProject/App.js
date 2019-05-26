@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { AppRegistry, View } from 'react-native';
-import { createStore, combineReducers } from 'redux';
+import { createStore } from 'redux';
+// import { createStore, combineReducers } from 'redux';
 import Counter from './components/Counter';
 import { counter } from './reducers/reducers';
 
-const store = createStore(combineReducers({ counter }));
+const store = createStore(counter);
 
 export default class App extends Component {
 

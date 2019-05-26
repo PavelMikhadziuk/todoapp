@@ -7,7 +7,8 @@ const Counter = props => {
   return (
     <View style={styles.container}>
       <View style={styles.alternativeLayoutButtonContainer}>
-        <Text>{props.state}</Text>
+        <Text>Counter</Text>
+        <Text>{props.count}</Text>
         <Button
           onPress={props.onIncrement}
           title="+"
@@ -33,7 +34,11 @@ const styles = StyleSheet.create({
   }
 });
 
-const mapStateToProps = state => ({ state });
+const mapStateToProps = state => {
+  console.log('state = ', state);
+  console.log('state.count = ', state.count);
+  return {count: state.count};
+};
 
 const mapDispatchToProps = dispatch => ({
   onIncrement: () => {
