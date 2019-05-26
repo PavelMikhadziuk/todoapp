@@ -2,34 +2,40 @@ import { counter } from '../reducers/reducers';
 import { INCREMENT, DECREMENT } from '../constants/actions';
 
 describe('reducers', () => {
+  const stateBefore1 =  { count: 0 };
+  const stateAfter1 = { count: 1 };
+  const stateBefore2 =  { count: 1 };
+  const stateAfter2 = { count: 3 };
+
   test('increment counter', () => {
     expect(
-      counter(0, {type: 'INCREMENT' })
-    ).toEqual(1);
+      counter(Object.freeze(stateBefore1), {type: 'INCREMENT', amount: 1 })
+    ).toEqual(Object.freeze(stateAfter1));
 
     expect(
-      counter(1, {type: 'INCREMENT' })
-    ).toEqual(2);
+      counter(Object.freeze(stateBefore2), {type: 'INCREMENT', amount: 2 })
+    ).toEqual(Object.freeze(stateAfter2));
   });
 
   test('decrement counter', () => {
     expect(
-      counter(2, {type: 'DECREMENT' })
-    ).toEqual(1);
+      counter(Object.freeze(stateAfter2), {type: 'DECREMENT', amount: 2 })
+    ).toEqual(Object.freeze(stateBefore2));
 
     expect(
-      counter(1, {type: 'DECREMENT' })
-    ).toEqual(0);
+      counter(Object.freeze(stateAfter1), {type: 'DECREMENT', amount: 1 })
+    ).toEqual(Object.freeze(stateBefore1));
   });
 
   test('something', () => {
+    const state = Object.freeze({ count: 1 });
     expect(
-      counter(1, {type: 'SOMETHING_ELSE' })
-    ).toEqual(1);
+      counter(state, {type: 'SOMETHING_ELSE' })
+    ).toEqual(state);
 
     expect(
       counter(undefined, {})
-    ).toEqual(0);
+    ).toEqual(Object.freeze({ count: 0 }));
   });
 });
 
