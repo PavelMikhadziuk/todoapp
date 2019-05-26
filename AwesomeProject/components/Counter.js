@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableNativeFeedback, StyleSheet, View, Text } from 'react-native';
 import { connect  } from 'react-redux';
-import { DECREMENT, INCREMENT } from '../constants/actions';
+import { DECREMENT, INCREMENT, RESET } from '../constants/actions';
 
 const Counter = props => {
   return (
@@ -14,6 +14,11 @@ const Counter = props => {
         <TouchableNativeFeedback onPress={props.onIncrement}>
           <View style={styles.buttonLayout}>
             <Text style={styles.buttonTextLayout}>+</Text>
+          </View>
+        </TouchableNativeFeedback>
+        <TouchableNativeFeedback onPress={props.onReset}>
+          <View style={styles.buttonLayout}>
+            <Text style={styles.buttonTextLayout}>R</Text>
           </View>
         </TouchableNativeFeedback>
         <TouchableNativeFeedback onPress={props.onDecrement}>
@@ -40,10 +45,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around'
   },
   buttonLayout: {
-    paddingTop: 30,
-    paddingBottom: 30,
-    paddingLeft: 50,
-    paddingRight: 50,
+    padding: 30,
     backgroundColor: 'lightgreen',
     borderRadius: 20
   },
@@ -66,6 +68,10 @@ const mapDispatchToProps = dispatch => ({
 
   onDecrement: () => {
     dispatch({ type: DECREMENT });
+  },
+
+  onReset: () => {
+    dispatch({ type: RESET });
   },
 });
 
