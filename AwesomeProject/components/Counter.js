@@ -1,35 +1,56 @@
-import React from 'react';
-import { TouchableNativeFeedback, StyleSheet, View, Text } from 'react-native';
+import React, { Component } from 'react';
+import { TouchableNativeFeedback, StyleSheet, View, Text, TextInput } from 'react-native';
 import { connect  } from 'react-redux';
 import { DECREMENT, INCREMENT, RESET } from '../constants/actions';
 
-const Counter = props => {
-  return (
-    <View style={styles.container}>
-      <View style={{ alignItems: 'center'}}>
-        <Text style={{ fontSize: 30 }}>Counter</Text>
-        <Text style={{ fontSize: 60 }}>{props.count}</Text>
+class Counter extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      amount: 1,
+    }
+  }
+
+  handleOnIncrement = () => {
+    console.log('this.state.amount ', this.state.amount);
+    this.props.onIncrement(this.state.amount);
+  };
+
+  handleOnDecrement = () => {
+    this.props.onDecrement(this.state.amount);
+  };
+  render() {
+    return (
+      <View style={styles.container}>
+        <View style={{alignItems: 'center'}}>
+          <Text style={{fontSize: 30}}>Counter</Text>
+          <Text style={{fontSize: 60}}>{this.props.count}</Text>
+        </View>
+        <View style={styles.alternativeLayoutButtonContainer}>
+          <TouchableNativeFeedback onPress={this.handleOnIncrement}>
+            <View style={styles.buttonLayout}>
+              <Text style={styles.buttonTextLayout}>+</Text>
+            </View>
+          </TouchableNativeFeedback>
+          <TouchableNativeFeedback onPress={this.props.onReset}>
+            <View style={styles.buttonLayout}>
+              <Text style={styles.buttonTextLayout}>R</Text>
+            </View>
+          </TouchableNativeFeedback>
+          <TouchableNativeFeedback onPress={this.handleOnDecrement}>
+            <View style={styles.buttonLayout}>
+              <Text style={styles.buttonTextLayout}>-</Text>
+            </View>
+          </TouchableNativeFeedback>
+        </View>
+        <TextInput
+          style={{height: 40, borderWidth: 1}}
+          onChangeText={text => { this.setState({ amount: parseInt(text || 1)})}}
+        />
       </View>
-      <View style={styles.alternativeLayoutButtonContainer}>
-        <TouchableNativeFeedback onPress={props.onIncrement}>
-          <View style={styles.buttonLayout}>
-            <Text style={styles.buttonTextLayout}>+</Text>
-          </View>
-        </TouchableNativeFeedback>
-        <TouchableNativeFeedback onPress={props.onReset}>
-          <View style={styles.buttonLayout}>
-            <Text style={styles.buttonTextLayout}>R</Text>
-          </View>
-        </TouchableNativeFeedback>
-        <TouchableNativeFeedback onPress={props.onDecrement}>
-          <View style={styles.buttonLayout}>
-            <Text style={styles.buttonTextLayout}>-</Text>
-          </View>
-        </TouchableNativeFeedback>
-      </View>
-    </View>
-  );
-};
+    );
+  }
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -58,16 +79,16 @@ const styles = StyleSheet.create({
 const mapStateToProps = state => {
   console.log('state = ', state);
   console.log('state.count = ', state.count);
-  return {count: state.count};
+  return { count: state.count };
 };
 
 const mapDispatchToProps = dispatch => ({
-  onIncrement: () => {
-    dispatch({ type: INCREMENT });
+  onIncrement: amount => {
+    dispatch({ type: INCREMENT, amount });
   },
 
-  onDecrement: () => {
-    dispatch({ type: DECREMENT });
+  onDecrement: amount => {
+    dispatch({ type: DECREMENT, amount });
   },
 
   onReset: () => {
